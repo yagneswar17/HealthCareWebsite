@@ -1,7 +1,5 @@
 # Health Care Website
 
-##Open Website
-
 ## Website Link
 
 [Link-1](https://yagneswar17.github.io/HealthCareWebsite/)
