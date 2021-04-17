@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-HISTORY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ehis.css">
+
+    <script>
+        let sortDirection = false;
+        let personData = [{
+            NO: 1,
+            HOSPITAL: 'SOMEX',
+            DEPARTMENT: 'SOMEY',
+            DOCTOR: 'SOMEZ',
+            MEDICINES: 'SOMEZ',
+            DATE: '21-11-2001'
+        }, {
+            NO: 2,
+            HOSPITAL: 'SOMEX',
+            DEPARTMENT: 'SOMEY',
+            DOCTOR: 'SOMEZ',
+            MEDICINES: 'SOMEZ',
+            DATE: '21-11-2001'
+        }, {
+            NO: 3,
+            HOSPITAL: 'SOMEX',
+            DEPARTMENT: 'SOMEY',
+            DOCTOR: 'SOMEZ',
+            MEDICINES: 'SOMEZ',
+            DATE: '21-11-2001'
+        }];
+        window.onload = () => {
+            loadTableData(personData);
+        };
+
+        function loadTableData(personData) {
+            const tableBody = document.getElementById('tabledata');
+            let dataHtml = '';
+            for (let person of personData) {
+                dataHtml += `<tr><td>${person.NO}</td><td>${person.HOSPITAL}</td><td>${person.DEPARTMENT}</td><td>${person.DOCTOR}</td><td>${person.MEDICINES}</td><td>${person.DATE}</td></tr>`;
+            }
+            console.log(dataHtml)
+
+            tableBody.innerHTML = dataHtml;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="filter">
+
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>HOSPITAL</th>
+                <th>DEPARTMENT</th>
+                <th>DOCTOR</th>
+                <th>MEDICINES</th>
+                <th>DATE</th>
+            </tr>
+        </thead>
+        <tbody id="tabledata"></tbody>
+    </table>
+</body>
+
+</html>

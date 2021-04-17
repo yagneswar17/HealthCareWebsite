@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPD form</title>
+    <link rel="stylesheet" href="opd.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="formBx">
+            <form>
+                <h2>OPD Form</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>UHID</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>UHID Number</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Age</span>
+                </div>
+                <div class="inputBox">
+                    <h4>Enter date</h4>
+                    <input type="date" name="" required="required">
+                </div>
+                <div class="inputBox">
+                    <h4>Select time</h4>
+                    <select class="select">
+                        <option value="9.00">9.00 AM</option>
+                        <option value="10.00">10.00 AM</option>
+                        <option value="11.00">11.00 AM</option>
+                        <option value="12.00">12.00 AM</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                   <select class="select" id="">
+                        <option value="">Select OPD</option>
+                        <option value="SUR">Surgery</option>
+                        <option value="ORT">Orthopaedics</option>
+                        <option value="MED">Medical</option>
+                        <option value="DER">Dermatology</option>
+                        <option value="DEN">Dental</option>
+                        <option value="CAR">Cardialogy</option>
+                        <option value="PSY">Psychiatry</option>
+                        <option value="EYE">Eye</option>
+                        <option value="PAE">Paediatric</option>
+                        <option value="ENT">ENT</option>
+                        <option value="OGY">Gynacelogy</option>
+                   </select>
+                </div>
+                <div class="inputBox">
+                   <input type="submit" value="send" name="">
+                </div>
+            </form>
+        </div>
+        <div class="imgBx">
+             <img src="doc.svg" height="600px" width="600px">
+        </div>
+    </div>
+</body>
+</html>

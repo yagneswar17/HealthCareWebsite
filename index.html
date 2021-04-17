@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital-Management-system</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" async></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Medical<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="https://heathisimportantforus.blogspot.com/">Blog</a></li>
+            <div class="dropdown">
+                <li class="dropbtn">Login/Signup</li>
+                <div class="dropdown-content">
+                    <a href="doc-login.html"> As Doctor</a>
+                    <a href="user-login.html"> As User</a>
+                </div>
+            </div>
+        </ul>
+    </header>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Always Choose Good</h2>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout Us</h2>
+                <p id="p"> (a) Administrative Department - HOD Executive Officer</p>
+                <br>
+                <p> 1) MI Room</p>
+                <p> 2) Medical Stores</p>
+                <p> 3) Dispensary</p>
+                <p> 4) Medical Board Office</p>
+                <p> 5) Regulating & Security</p>
+                <p> 6) Fire Fighting & NBCDO</p>
+                <p> 7) Education</p>
+                <p> 8) Sports</p>
+                <p> 9) WR Mess Secretary</p>
+                <p> 10) Canteen</p>
+                <p> 11) IT Dept/ NHIMS</p>
+                <br><br>
+                <p id="p">(b) Works & Maintenance Department - OI/C Senior Works Officer</p>
+                <br>
+                <p>1) Works</p>
+                <p>2) Maintenance</p>
+                <br><br>
+                <p id="p">(c)Clinical Department – Senior specialist in each department is HOD</p>
+                <br> 1) Medicine<br> 2) Surgery<br> 3) Gynaecology<br> 4) Anaesthesiology<br> 5) Eye<br> 6) ENT<br> 7) Dermatology<br> 8) Psychiatry<br> 9) Paediatrics<br> 10) Dental<br> 11) Pathology<br> 12) Radiology</p>
+                <br>
+                <p id="p">(d)Nursing Department - O I/c PM</p>
+                <br>
+                <p id="p">(e)Logistics Department - O I/c Logistics Officer</p><br>
+                <p>1)Pay</p>
+                <p>2)Casual Stores</p>
+                <p>3)Victualling Stores</p>
+                <p>4)SD Section</p>
+                <p>5)CE Section</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_4FGi6N.json" background="transparent" speed="1" style="width: 600px; height: 600px;" loop autoplay id="image"></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="facilty" id="Facility">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>F</span>acilities at <span>H</span>ospitals</h2>
+                <p>
+                    a) A fully equipped state of the art Casualty Centre functions 24 x 7 with following: <br><br> 1) 03 Doctors<br> 2) 03 patient trolleys and 05 wheel chairs.<br> 3) Cardiac Monitor, Defibrillator, ECG machine, Pulse Oxymeter, Oxygen
+                    Concentrator, Central Oxygen Supply.<br> 4) 07 MA’s<br> 5) 01CC Van + 02 Ambulances<br>
+                </p>
+                <br>
+                <p>
+                    b) Medical OPD<br> c) Cardiac OPD<br> d) Surgical OPD<br> e) Orthopaedic OPD<br> f) Obs and Gyn OPD<br> g) ENT OPD<br> h) Eye OPD<br> j) Dermatology OPD<br> k) Paediatric OPD<br> l) Psychiatric OPD<br> m) Dental OPD<br> n) Pre Anaesthesia
+                    Check up OPD with Modular OT<br> p) Fully functional Laboratory<br> r) Blood Transfusion Department<br> s) X-Ray, USG and CT scan facilities<br> t) Department of Medical Informatics <br> u) Modular Medical and Surgical ICU<br> v) Renal
+                    Care Unit<br>
+                </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_42B8LS.json" background="transparent" speed="1" style="width: 600px; height: 600px;" loop autoplay id="image"></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyrightText">
+            <p id="foot">Copyright 2021 <a href="#"> Script kiddies  </a><span> </span> All Right Reserved</p>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+
+    function toggleMenu() {
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+
+
+    let progress = document.getElementById('progressbar');
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function() {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+    }
+</script>
+
+</html>

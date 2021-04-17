@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OPD Test</title>
+</head>
+
+<body>
+    <h2>OPD Form</h2>
+    UHID<input type="text" name="" required="required" id="UHID"></input>
+    <br> <br> Aadhar No <input type="text" name="" required="required" id="Aadhar"></input>
+    <br> <br> Age <input type="text" name="" required="required" id="Age"></input>
+    <br> <br> Date <input type="date" name="" required="required" id="Date"></input><br><br>
+    <br> <br>
+    <button id="insert">Insert</button>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <script id="MainScript">
+        var firebaseConfig = {
+            apiKey: "AIzaSyAb5rcc8qgEJSzgg5ClOPN-3BVHyZL05rI",
+            authDomain: "healthisimportant4us.firebaseapp.com",
+            databaseURL: "https://healthisimportant4us-default-rtdb.firebaseio.com",
+            projectId: "healthisimportant4us",
+            storageBucket: "healthisimportant4us.appspot.com",
+            messagingSenderId: "604815506249",
+            appId: "1:604815506249:web:e622cd60209544b9023898",
+            measurementId: "G-RZ7KL407T5"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        //const auth = firebase.auth();
+        var uhid, ano, age, date, time, opd;
+        //var database = firebase.database();
+
+        function Ready() {
+            uhid = document.getElementById('UHID').value;
+            ano = document.getElementById('Aadhar').value;
+            age = document.getElementById('Age').value;
+            date = document.getElementById('Date').value;
+        }
+
+        document.getElementById('insert').onclick = function() {
+            Ready();
+            firebase.database().ref('patient/' + ano).set({
+                UHID: uhid,
+                AadharNumber: ano,
+                Age: age,
+                Date: date
+            });
+
+        }
+    </script>
+</body>
+
+</html>
